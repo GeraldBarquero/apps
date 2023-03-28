@@ -34,6 +34,6 @@ jobs:
             APP_ENV= ${{ secrets.APP_ENV }}
         
       - name: Run test
-        run: docker run --rm --name api p 3000:3000 ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest  
+        run: docker run --rm --name api -p 3000:3000 ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest  
 
       
