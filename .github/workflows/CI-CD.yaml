@@ -1,0 +1,26 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: ["stage"]
+
+env:
+  REGISTRY: geraldbar
+  IMAGE_NAME: kubelabs_publicapi2
+  OPS_BRANCH: main
+  OPS_REPO: GeraldBarquero/ops
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout code
+        with:
+          fetch-depth: 0
+      
+      - name: Login to Dockerhub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          username: ${{ secrets.DOCKER_PASSWORD }}
