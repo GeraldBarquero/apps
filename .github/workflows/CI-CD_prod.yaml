@@ -9,7 +9,7 @@ env:
   IMAGE_NAME: kubelabs_publicapi2
   OPS_BRANCH: main
   OPS_REPO: GeraldBarquero/ops
-  VERSION: 2.0.0
+  VERSION: 5.0.0
 
 jobs:
   build:

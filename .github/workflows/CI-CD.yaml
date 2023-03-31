@@ -9,7 +9,7 @@ env:
   IMAGE_NAME: kubelabs_publicapi2
   OPS_BRANCH: main
   OPS_REPO: GeraldBarquero/ops
-  VERSION: 2.0.0
+  VERSION: 5.0.0
 
 jobs:
   build:
@@ -67,5 +67,5 @@ jobs:
           git config --local user.email "deploy-bot@stotylabs.dev"
           git config --local user.name "Storylabs deploy-Bot"
           git add .
-          git commit -am "New image version, branch: staging, tag: ${{ env.VERSION }}"
+          git commit -am "New image version, branch: stage, tag: ${{ env.VERSION }}"
           git push --force origin
